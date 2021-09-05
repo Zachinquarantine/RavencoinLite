@@ -75,11 +75,11 @@ private:
     const PlatformStyle *platformStyle;
 
 
-    /** RVN START */
+    /** RVL START */
     AssetsDialog *assetsPage;
     CreateAssetDialog *createAssetsPage;
     ReissueAssetDialog *manageAssetsPage;
-    /** RVN END */
+    /** RVL END */
 
 public Q_SLOTS:
     /** Switch to overview (home) page */
@@ -125,12 +125,12 @@ public Q_SLOTS:
     void requestedSyncWarningInfo();
 
 
-    /** RVN START */
+    /** RVL START */
     /** Switch to assets page */
     void gotoAssetsPage();
     void gotoCreateAssetsPage();
     void gotoManageAssetsPage();
-    /** RVN END */
+    /** RVL END */
 
 Q_SIGNALS:
     /** Signal that we want to show the main window */
@@ -149,4 +149,4 @@ Q_SIGNALS:
     void checkAssets();
 };
 
-#endif // RAVEN_QT_WALLETVIEW_H
+#endif // RAVENLITE_QT_WALLETVIEW_H
