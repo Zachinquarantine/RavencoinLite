@@ -25,7 +25,7 @@ import codecs
 context = zmq.Context()
 socket = context.socket(zmq.SUB)
 
-print("Getting Ravencoin msgs")
+print("Getting Ravencoin Lite msgs")
 socket.connect("tcp://localhost:28766")
 
 socket.setsockopt_string(zmq.SUBSCRIBE, "hashtx")
@@ -58,8 +58,8 @@ while True:
 		while(pos != -1):
 			pos = astr.find('72766e', start)
 			if (pos > -1):
-				print("FOUND RVN issuance at " + str(pos))
-				print("After RVN: " + astr[pos+6:pos+8])
+				print("FOUND RVL issuance at " + str(pos))
+				print("After RVL: " + astr[pos+6:pos+8])
 				sizestr = astr[pos+8:pos+10]
 				print("sizestr: " + sizestr)
 				#print(str(astr[pos+8:pos+10]))
@@ -68,7 +68,7 @@ while True:
 				print("Name: " + bytes.fromhex(astr[pos+10:pos+10+size*2]).decode('utf-8'))
 			pos = astr.find('72766e', start)
 			if (pos > -1):
-				print("FOUND RVN something at " + str(pos))
+				print("FOUND RVL something at " + str(pos))
 			start += pos+8
 			print(astr)
 
